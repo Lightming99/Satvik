@@ -45,7 +45,9 @@
 #hero img{
 		display: block;
 		position: fixed;
-		margin-right: auto;
+		margin-top:17px;
+}
+
 		margin-left: auto;
 	        margin-top: 20px;
 }
