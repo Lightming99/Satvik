@@ -3,11 +3,51 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/*.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+	width: 200px;
+	background-color:#f1f1f1 ;
+	border: .5px solid black;
+	border-radius: 20;
+	height: 500px;
+	position: fixed;
+	overflow: auto;
+	background-image: url(logo1.svg) no-repeat center;
+	position: fixed;
+	top: 0;
+	width: 15%;
+
+}
+.nav li a {
+	display: block;
+	text-decoration: none;
+	color: grey;
+	padding: 14px 16px;
+	text-align: center;
+}
+li a:hover {
+	background-color: #555;
+	color:white;
+}
+.nav li {
+	float: top;
+	border-right: 1px solid #bbb;
+}
+li:last-child {
+	border-right: none;
+}
+.active {
+	background-color: #04AA6D;
+}
+*/
 .dropbtn {
 	background-color:#4CAF50;
 	color: white;
 	padding: 16px;
-	margin-top: 10px;
+	margin-top: 80px;
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
@@ -45,10 +85,17 @@
 #hero img{
 		display: block;
 		position: fixed;
-		margin-top:17px;
-}
+		margin-top: 15px;
 
-		margin-left: auto;
-	        margin-top: 20px;
 }
-
+.look {
+	background-color: #071021;
+}
+#banner {
+	border: 0.5px solid black;
+	border-radius: 5px;
+}
+.transition
+{
+	background-color: #040D1C;
+}
