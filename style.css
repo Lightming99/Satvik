@@ -43,7 +43,10 @@
   background-color: #3e8e41;
 }
 #hero img{
-		display: float;
+		display: block;
 		position: fixed;
 		margin-right: auto;
 		margin-left: auto;
+	        margin-top: 13px;
+}
+
