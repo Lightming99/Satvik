@@ -31,7 +31,7 @@ a {
 	margin: auto;
 }
 section { 
-margin:80px auto 
+ margin:80px auto 
 }
 nav {
 	display: flex;
@@ -99,7 +99,8 @@ nav {
 	top: 20px;
 	right: 20px;
 	display: none;
-	width: 30p;x
+	width: 30px;
+
 }
 
 .section-title h1 {
@@ -179,9 +180,9 @@ footer .container {
 		flex-direction: column;
 		background: gray;
 		position: fixed;
+		max-width: 450px;
 		top: 0;
-		max-width:900px;
-		right: -900px;
+		right: -450px;
 		width: 80%;
 		height: 100vh;
 		padding-top: 80px;
@@ -200,10 +201,21 @@ footer .container {
 	}
 	footer .container{
 		flex-direction: column;
-		gap: 16px;
+		gap: ;
 	}
 	.main-content .main-heading {
 	font-size: 80px;
 	margin-top: -20px;
+}
+#main {
+	background-image: url('banner.webp');
+	min-height: 70vh;
+	background-position: bottom center;
+	background-size: cover;
+}
+.container {
+	max-width: 100%;
+	padding: 16px;
+	margin: auto;
 }
 }
