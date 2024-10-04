@@ -201,4 +201,8 @@ footer .container {
 		flex-direction: column;
 		gap: 16px;
 	}
+	.main-content .main-heading {
+	font-size: 80px;
+	margin-top: -20px;
+}
 }
