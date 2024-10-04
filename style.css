@@ -178,7 +178,7 @@ footer .container {
 	.nav-list{
 		flex-direction: column;
 		background: gray;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		max-width:900px;
 		right: -900px;
