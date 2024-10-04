@@ -8,40 +8,95 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="look">
-<header class="dropdown">
-	<label id="hero"><img src="logo1.svg" id="hero" height="400px" width="400px"></label>
-	<button class="dropbtn"><img src="Menu.png" height="30px" width="25px"></button>
-	<nav class="dropdown-content">
-		
-			<a href="#">Home</a>
-			<a href="#">Courses</a>
-			<a href="#">Learning</a>
-			<a href="#">Consult</a>
-			<a href="#">About US</a>
-			<a href="#">Contact US</a>
-			
-	</nav>	
+
+<header id="main">
+	<div class="container">
+		<nav>
+			<img src="logo2.svg" class="logo" height="50px" width="120px">
+			<ul class="nav-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Professional Courses</a></li>
+				<li><a href="#">Consult Us</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Help</a></li>
+				<li><button class="btn btn-secondary">9882793077</button></li>
+			</ul>
+			<img src="menu.png" class="menu-btn">
+		</nav>
+
+<div class="main-content">
+	<h1 class="intro-heading"> We all Love</h1>
+	<h1 class="main-heading">Perfection</h1>
+	<p>Astro Satvik Provides best consultation and teaching services in astrology, Don't believe us try our Free Courses</p>
+	<button class="btn btn-primary"> Consult Now </button>
+</div>
+</div>
 </header>
-</div>
-<!-- banner section -->
-<div class="banner">
-	<img src="banner.webp" id = "banner" alt="banner consisting moving planets with a slogan to seek world beyond" height="400px" width="100%">
-</div>
-<!-- moving discount transition -->
-<div class="transition">
-	<h5> We are giving 50% OFF on festive season<a href="#"> <button>click here</button></a></h5>
-</div>
 
+<section id="services">
+	<div class="container">
+		<div class="section-title">
+			<h1> Free Courses </h1>
+			<div class="line"></div>
+				
+			</div>
 
-<div class="img-1">
-	<img src="reading.jpeg" height="250px" width="100%">
-</div>
-	<div class="img-2">
-		<img src = "" height = "300px" width = "100%">
-	
+			<div class="services">
+		
+		<div class="service">
+			<img src="reading.jpeg">
+			<h3>Hora Chart</h3>
+			<p>Astro Satvik Provides best consultation and teaching services in astrology, Don't believe us try our Free Courses</p>
+		</div>
 
+		<div class="service">
+			<img src="reading.jpeg">
+			<h3>Chart Reading</h3>
+			<p> Astro Satvik Provides best consultation and teaching services in astrology, Don't believe us try our Free Courses</p>
+		</div>
 
+		<div class="service">
+			<img src="reading.jpeg">
+			<h3>Nakshartras</h3>
+			<p> text here</p>
+		</div>
+
+		</div>
+	</div>
+
+</section>
+
+<section id="testimonial">
+	<div class="container">
+		<img src="#">
+		<h1> content of reviews </h1>
+		<div class="profile">
+			<img src="#" alt="image">
+			<h4> Satvik Saini</h4>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+	<ul class="footer-links">
+		<li><a href="#">Home</a></li>
+		<li><a href="#"><b>Consult Us</b></a></li>
+		<li><a href="#">Conatct Us</a></li>
+		<li><a href="#">Help</a></li>
+	</ul>
+	<img src="logo2.svg"height="50px" width="120px" class="footerLogo"/>
+	<p>All set By @nmol</p>
+	</div>
+</footer>
+<script src="script.js">
+	<script>
+const navBtn = document.querySelector('.menu-btn')
+const navList = document.querySelector('.nav-list')
+
+navBtn.addEventListener('click', function(){
+	navList.classList.toggle('active')
+})
+</script>
 
 </body>
 
