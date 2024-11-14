@@ -95,7 +95,7 @@ app.post('/authenticate', async (req, res) => {
 });
 // Root route to serve the main HTML file
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public1/course.html'); // Ensure course.html is in the 'public1' directory
+    res.sendFile('course.html'); // Ensure course.html is in the 'public1' directory
 });
 
 // Fallback route for sign-up service info
