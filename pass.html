@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Data and Payment</title>
+<link rel="stylesheet" href="fail.css">
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Course Registration</h2>
+        <form id="payment-form">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+            <textarea id="address" placeholder="Address" required></textarea>
+            <button id="payButton">Proceed to Payment</button>
+        </form>
+    </div>
+    <script>
+        const stripe = Stripe('your_stripe_publishable_key'); // Replace with your Stripe Publishable Key
+
+        const form = document.getElementById('payment-form');
+        const payButton = document.getElementById('payButton');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Create a Stripe Token
+            const { token, error } = await stripe.createToken();
+
+            if (error) {
+                alert('Payment Error: ' + error.message);
+                return;
+            }
+
+            // Send data to the server
+            const response = await fetch('/process-payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    fullName: form.fullName.value,
+                    email: form.email.value,
+                    password: form.password.value,
+                    phoneNumber: form.phoneNumber.value,
+                    address: form.address.value,
+                    token: token.id
+                })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Payment Successful and Data Saved!');
+                form.reset();
+            } else {
+                alert('Payment Failed. Try Again.');
+            }
+        });
+    </script>
+</body>
+</html>
