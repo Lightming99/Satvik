@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<title>consult astrology</title>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="consult.css">
+
+</head>
+<body>
+	<header id="main">
+	<div class="container">
+		<nav>
+             <div class="logo-container">
+        <!-- Saturn with its revolving ring -->
+        <div class="saturn-system">
+            <div class="saturn"></div>
+            <div class="tilted-ring"></div>
+        </div>
+
+        <!-- Website name -->
+        <h1 class="logo-name">ASTRO SATVIK</h1>
+
+        <!-- Slogan -->
+        <p class="logo-slogan">Perfect Predictions For Perfect Life</p>
+    </div>
+			<ul class="nav-list">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="course.html">Professional Courses</a></li>
+				<li><a href="consult.html">Consult Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li><button class="btn btn-secondary">9882793077</button></li>
+			</ul>
+			<img src="icon.png" class="menu-btn">
+		</nav>
+
+<div class="main-content">
+	<h1 class="intro-heading"> It's Time To</h1>
+	<h1 class="main-heading">Consult US</h1>
+	<p><b>"</b> If you are feeling any question or Queries PLEASE click The Button Below <b>"</b></p>
+	<a href="index.html"><button class="btn btn-primary"> Back </button></a>
+</div>
+</div>
+</header>
+<section id="form">
+	<div class="form-style">
+		<h3 class="form-title">Please Fill The Details</h3>
+ <form action="http://localhost:3000/sign_up" method="post">  
+  <div class="main-user-info">
+          <div class="user-input-box">                
+                              
+           <label for="name" >Name</label><br>
+            <input  type="text" name="name" id="name" 
+            placeholder="Name"  required /><br> 
+        </div>
+        <div class="user-input-box">
+           <label for="email" >Email</label> <br>                  
+            <input  type="email" name="email" id="email" 
+            placeholder="E-Mail " required /><br> 
+            </div> 
+             <div class="user-input-box">
+              <label for="phone" >Phone Number</label> <br>               
+            <input  type="text" name="phone" id="phone"  
+            placeholder="Phone Number " required/><br> 
+        </div>
+         <div class="user-input-box">
+             <label for="Date_Of_Birth">Date Of Birth</label><br>
+              <input type="date" name="Date_Of_Birth" id="phone"  
+             required/><br> 
+         </div>
+          <div class="user-input-box">
+               <label for="Time_Of_Birth">Time Of Birth</label><br>
+              <input type="time" name="Time_Of_Birth" id="phone"  
+             required/><br> 
+              </div>
+               <div class="user-input-box">
+               <label for="birth_place" >Birth Place</label><br>
+              <input  type="text" name="birth_place" id="phone"  
+            placeholder="Birth Address " required/><br>
+            </div>
+            <div class="user-input-box">
+                <label for="price" id="plan-heading" >Please Choose Plan</label>
+             <select name ="price" class="price" required>
+                 <option name = "price" value = "marriage" class="price">Marriage Plan Discounted Price &#8377;2100</option>
+             </select>
+
+            </div>
+ <div class="user-input-box">
+               <label for="birth_pincode" >Birth Pincode</label><br>
+              <input  type="text" name="birth_pincode" id="phone"  
+            placeholder="Birth Place Pincode (Google It) " required/><br>
+            </div>
+           </div>
+ <div class="gender-details-box">
+          <span class="gender-title">Gender</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" value="male" required>
+            <label for="male" value="male">Male</label>
+            <input type="radio" name="gender" value="female" required>
+            <label for="female" value="female">Female</label>
+          </div>
+        </div>
+
+   <div class="form-submit-btn">
+            <input type="submit" id="submitDetails"  
+            name="submitDetails" value="Submit" /><br>
+            </div> 
+                      
+            </form> 
+
+        </div>
+        </section>
+        <footer>
+        <div id="logo">
+            <img src="astro.png" alt="Logo" />
+        </div>
+        
+        <div id="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Professional Courses</a>
+            <a href="#">Consult Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div id="social-media">
+            <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="twitter.svg" alt="Twitter" /></a>
+            <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+    </footer>
+
+<script>
+const navBtn = document.querySelector('.menu-btn')
+const navList = document.querySelector('.nav-list')
+const form = document.querySelector('#form')
+
+navBtn.addEventListener('click', function(){
+	navList.classList.toggle('active');
+}
+)
+
+</script>
+</body>
+</html>
