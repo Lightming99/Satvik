@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>User Data and Payment</title>
-<link rel="stylesheet" href="fail.css">
-<script src="https://js.stripe.com/v3/"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Course Webpage</title>
+    <link rel="stylesheet" href="pass.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Course Registration</h2>
-        <form id="payment-form">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
-            <textarea id="address" placeholder="Address" required></textarea>
-            <button id="payButton">Proceed to Payment</button>
-        </form>
+    <div id="loginContainer">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Login</button>
+        <div id="loginError" style="display: none; color: red;">Invalid login. Please try again.</div>
     </div>
-    <script>
-        const stripe = Stripe('your_stripe_publishable_key'); // Replace with your Stripe Publishable Key
 
-        const form = document.getElementById('payment-form');
-        const payButton = document.getElementById('payButton');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Create a Stripe Token
-            const { token, error } = await stripe.createToken();
-
-            if (error) {
-                alert('Payment Error: ' + error.message);
-                return;
-            }
-
-            // Send data to the server
-            const response = await fetch('/process-payment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    fullName: form.fullName.value,
-                    email: form.email.value,
-                    password: form.password.value,
-                    phoneNumber: form.phoneNumber.value,
-                    address: form.address.value,
-                    token: token.id
-                })
-            });
-
-            const result = await response.json();
-            if (result.success) {
-                alert('Payment Successful and Data Saved!');
-                form.reset();
-            } else {
-                alert('Payment Failed. Try Again.');
-            }
-        });
-    </script>
+    <div id="courseContainer" style="display: none;">
+        <div id="sidebar" class="sidebar">
+            <button id="closeSidebar">✖</button>
+            <h2>Course Content</h2>
+            <ul id="courseList">
+                <li data-type="video" data-src="video1.mp4" data-subtitles="Introduction to the course.">Video 1: Introduction</li>
+                <li data-type="video" data-src="video2.mp4" data-subtitles="Advanced techniques covered in this video.">Video 2: Advanced Techniques</li>
+                <li data-type="pdf" data-src="document1.pdf" data-subtitles="">PDF 1: Course Notes</li>
+            </ul>
+        </div>
+        <button id="toggleSidebar">☰</button>
+        <div class="main-content">
+            <div class="media-container">
+                <video id="mediaPlayer" controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="subtitles" id="subtitles">Subtitles will appear here.</div>
+        </div>
+    </div>
+    <script src="pass.js"></script>
 </body>
 </html>
